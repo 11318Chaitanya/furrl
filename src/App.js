@@ -1,6 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
 import VibePage from "./pages/VibePage";
 
 
