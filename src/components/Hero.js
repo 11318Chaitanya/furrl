@@ -28,22 +28,14 @@ const Hero = () => {
         {data && (
             <section>
               <div className='relative'>
-                  <div
-                  className="background-image"
-                  style={{
-                    backgroundImage: `url(${data.imageUrl})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'top',
-                    height: '33vh',
-                    width: '100%',
-                  }}
-                >
+                  <div className='w-full h-[36vh] overflow-hidden'>
+                    <img className='object-fit w-full' src={data.imageUrl} alt="" />
+              </div>
                 <div className='absolute bottom-0 flex items-center justify-center w-full py-4' style={{
                   backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0) 16.36%, rgb(38, 38, 30) 242.73%)'
                 }}>
                   <p className='w-full text-center text-white text-3xl italic'>{data.name}</p>
                 </div>
-              </div>
             </div>
           </section>
         )}
