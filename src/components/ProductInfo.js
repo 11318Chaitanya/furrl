@@ -9,14 +9,15 @@ const ProductTitle = ({ title, position }) => {
 };
 
 const ProductPrice = ({ price, mrp, discountPercent }) => {
+  console.log(discountPercent);
   return (
     <div className="flex gap-1">
       <span className="font-bold">Rs. {price.value}</span>
-      {mrp && mrp.value && (
-        <span className="text-[#64748BB3] line-through">Rs. {mrp.value}</span>
-      )}
-      {discountPercent && (
-        <span className="text-[#7e59e7]">{discountPercent}%</span>
+      {mrp && mrp.value && mrp.value !== price.value && (
+        <>
+          <span className="text-[#64748BB3] line-through">Rs. {mrp.value}</span>
+          <span className="text-[#7e59e7]">{discountPercent}%</span>
+        </>
       )}
     </div>
   );
